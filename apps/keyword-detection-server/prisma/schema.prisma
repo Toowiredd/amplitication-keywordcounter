@@ -1,0 +1,35 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Detection {
+  createdAt   DateTime     @default(now())
+  id          String       @id @default(cuid())
+  keywords    Keyword[]
+  occurrences Occurrence[]
+  state       String?
+  updatedAt   DateTime     @updatedAt
+}
+
+model Keyword {
+  createdAt   DateTime   @default(now())
+  detection   Detection? @relation(fields: [detectionId], references: [id])
+  detectionId String?
+  id          String     @id @default(cuid())
+  text        String?
+  updatedAt   DateTime   @updatedAt
+}
+
+model Occurrence {
+  count       Int?
+  createdAt   DateTime   @default(now())
+  detection   Detection? @relation(fields: [detectionId], references: [id])
+  detectionId String?
+  id          String     @id @default(cuid())
+  updatedAt   DateTime   @updatedAt
+}
