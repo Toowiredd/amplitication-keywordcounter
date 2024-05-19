@@ -18,14 +18,18 @@ import { KeywordService } from "../keyword.service";
 const nonExistingId = "nonExistingId";
 const existingId = "existingId";
 const CREATE_INPUT = {
+  category: "exampleCategory",
   createdAt: new Date(),
+  description: "exampleDescription",
   detectionId: "exampleDetectionId",
   id: "exampleId",
   text: "exampleText",
   updatedAt: new Date(),
 };
 const CREATE_RESULT = {
+  category: "exampleCategory",
   createdAt: new Date(),
+  description: "exampleDescription",
   detectionId: "exampleDetectionId",
   id: "exampleId",
   text: "exampleText",
@@ -33,7 +37,9 @@ const CREATE_RESULT = {
 };
 const FIND_MANY_RESULT = [
   {
+    category: "exampleCategory",
     createdAt: new Date(),
+    description: "exampleDescription",
     detectionId: "exampleDetectionId",
     id: "exampleId",
     text: "exampleText",
@@ -41,7 +47,9 @@ const FIND_MANY_RESULT = [
   },
 ];
 const FIND_ONE_RESULT = {
+  category: "exampleCategory",
   createdAt: new Date(),
+  description: "exampleDescription",
   detectionId: "exampleDetectionId",
   id: "exampleId",
   text: "exampleText",

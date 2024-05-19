@@ -33,7 +33,9 @@ export class KeywordControllerBase {
     return await this.service.createKeyword({
       data: data,
       select: {
+        category: true,
         createdAt: true,
+        description: true,
         detectionId: true,
         id: true,
         text: true,
@@ -50,7 +52,9 @@ export class KeywordControllerBase {
     return this.service.keywords({
       ...args,
       select: {
+        category: true,
         createdAt: true,
+        description: true,
         detectionId: true,
         id: true,
         text: true,
@@ -68,7 +72,9 @@ export class KeywordControllerBase {
     const result = await this.service.keyword({
       where: params,
       select: {
+        category: true,
         createdAt: true,
+        description: true,
         detectionId: true,
         id: true,
         text: true,
@@ -95,7 +101,9 @@ export class KeywordControllerBase {
         where: params,
         data: data,
         select: {
+          category: true,
           createdAt: true,
+          description: true,
           detectionId: true,
           id: true,
           text: true,
@@ -122,7 +130,9 @@ export class KeywordControllerBase {
       return await this.service.deleteKeyword({
         where: params,
         select: {
+          category: true,
           createdAt: true,
+          description: true,
           detectionId: true,
           id: true,
           text: true,

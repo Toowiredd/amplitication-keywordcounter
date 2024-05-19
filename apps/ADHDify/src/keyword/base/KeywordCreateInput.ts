@@ -24,6 +24,28 @@ class KeywordCreateInput {
   @Field(() => String, {
     nullable: true,
   })
+  category?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  description?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
   detectionId?: string | null;
 
   @ApiProperty({

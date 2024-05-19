@@ -1,7 +1,7 @@
 import { Keyword as TKeyword } from "../api/keyword/Keyword";
 
-export const KEYWORD_TITLE_FIELD = "detectionId";
+export const KEYWORD_TITLE_FIELD = "category";
 
 export const KeywordTitle = (record: TKeyword): string => {
-  return record.detectionId?.toString() || String(record.id);
+  return record.category?.toString() || String(record.id);
 };

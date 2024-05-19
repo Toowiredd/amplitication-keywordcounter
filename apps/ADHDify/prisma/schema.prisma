@@ -8,7 +8,9 @@ generator client {
 }
 
 model Keyword {
+  category    String?
   createdAt   DateTime @default(now())
+  description String?
   detectionId String?
   id          String   @id @default(cuid())
   text        String?

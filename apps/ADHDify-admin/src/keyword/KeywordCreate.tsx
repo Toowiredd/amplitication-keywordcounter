@@ -5,6 +5,8 @@ export const KeywordCreate = (props: CreateProps): React.ReactElement => {
   return (
     <Create {...props}>
       <SimpleForm>
+        <TextInput label="category" source="category" />
+        <TextInput label="description" multiline source="description" />
         <TextInput label="Detection ID" source="detectionId" />
         <TextInput label="text" source="text" />
       </SimpleForm>
