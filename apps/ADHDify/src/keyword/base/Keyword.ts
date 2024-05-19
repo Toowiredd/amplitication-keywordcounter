@@ -11,7 +11,7 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { ObjectType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsString, IsOptional, IsDate } from "class-validator";
+import { IsString, IsOptional, IsDate, IsBoolean } from "class-validator";
 import { Type } from "class-transformer";
 
 @ObjectType()
@@ -64,6 +64,17 @@ class Keyword {
   @IsString()
   @Field(() => String)
   id!: string;
+
+  @ApiProperty({
+    required: false,
+    type: Boolean,
+  })
+  @IsBoolean()
+  @IsOptional()
+  @Field(() => Boolean, {
+    nullable: true,
+  })
+  isActive!: boolean | null;
 
   @ApiProperty({
     required: false,

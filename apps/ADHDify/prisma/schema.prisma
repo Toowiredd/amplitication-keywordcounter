@@ -13,6 +13,7 @@ model Keyword {
   description String?
   detectionId String?
   id          String   @id @default(cuid())
+  isActive    Boolean?
   text        String?
   updatedAt   DateTime @updatedAt
 }

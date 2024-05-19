@@ -5,6 +5,7 @@ import {
   ShowProps,
   TextField,
   DateField,
+  BooleanField,
 } from "react-admin";
 
 export const KeywordShow = (props: ShowProps): React.ReactElement => {
@@ -16,6 +17,7 @@ export const KeywordShow = (props: ShowProps): React.ReactElement => {
         <TextField label="description" source="description" />
         <TextField label="Detection ID" source="detectionId" />
         <TextField label="ID" source="id" />
+        <BooleanField label="isActive" source="isActive" />
         <TextField label="text" source="text" />
         <DateField source="updatedAt" label="Updated At" />
       </SimpleShowLayout>

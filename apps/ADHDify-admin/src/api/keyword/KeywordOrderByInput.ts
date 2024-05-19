@@ -6,6 +6,7 @@ export type KeywordOrderByInput = {
   description?: SortOrder;
   detectionId?: SortOrder;
   id?: SortOrder;
+  isActive?: SortOrder;
   text?: SortOrder;
   updatedAt?: SortOrder;
 };
