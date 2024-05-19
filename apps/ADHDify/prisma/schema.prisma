@@ -1,0 +1,19 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Keyword {
+  category    String?
+  createdAt   DateTime @default(now())
+  description String?
+  detectionId String?
+  id          String   @id @default(cuid())
+  isActive    Boolean?
+  text        String?
+  updatedAt   DateTime @updatedAt
+}
