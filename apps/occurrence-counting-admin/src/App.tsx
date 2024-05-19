@@ -9,6 +9,10 @@ import { KeywordList } from "./keyword/KeywordList";
 import { KeywordCreate } from "./keyword/KeywordCreate";
 import { KeywordEdit } from "./keyword/KeywordEdit";
 import { KeywordShow } from "./keyword/KeywordShow";
+import { OccurrenceList } from "./occurrence/OccurrenceList";
+import { OccurrenceCreate } from "./occurrence/OccurrenceCreate";
+import { OccurrenceEdit } from "./occurrence/OccurrenceEdit";
+import { OccurrenceShow } from "./occurrence/OccurrenceShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -41,6 +45,13 @@ const App = (): React.ReactElement => {
           edit={KeywordEdit}
           create={KeywordCreate}
           show={KeywordShow}
+        />
+        <Resource
+          name="Occurrence"
+          list={OccurrenceList}
+          edit={OccurrenceEdit}
+          create={OccurrenceCreate}
+          show={OccurrenceShow}
         />
       </Admin>
     </div>
