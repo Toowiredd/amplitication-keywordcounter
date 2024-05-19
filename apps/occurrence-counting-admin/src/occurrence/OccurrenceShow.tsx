@@ -11,8 +11,10 @@ export const OccurrenceShow = (props: ShowProps): React.ReactElement => {
   return (
     <Show {...props}>
       <SimpleShowLayout>
+        <TextField label="category" source="category" />
         <TextField label="count" source="count" />
         <DateField source="createdAt" label="Created At" />
+        <TextField label="description" source="description" />
         <TextField label="detection ID" source="detectionId" />
         <TextField label="ID" source="id" />
         <DateField source="updatedAt" label="Updated At" />

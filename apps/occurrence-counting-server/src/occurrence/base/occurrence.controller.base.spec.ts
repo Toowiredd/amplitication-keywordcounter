@@ -18,31 +18,39 @@ import { OccurrenceService } from "../occurrence.service";
 const nonExistingId = "nonExistingId";
 const existingId = "existingId";
 const CREATE_INPUT = {
+  category: "exampleCategory",
   count: 42,
   createdAt: new Date(),
+  description: "exampleDescription",
   detectionId: "exampleDetectionId",
   id: "exampleId",
   updatedAt: new Date(),
 };
 const CREATE_RESULT = {
+  category: "exampleCategory",
   count: 42,
   createdAt: new Date(),
+  description: "exampleDescription",
   detectionId: "exampleDetectionId",
   id: "exampleId",
   updatedAt: new Date(),
 };
 const FIND_MANY_RESULT = [
   {
+    category: "exampleCategory",
     count: 42,
     createdAt: new Date(),
+    description: "exampleDescription",
     detectionId: "exampleDetectionId",
     id: "exampleId",
     updatedAt: new Date(),
   },
 ];
 const FIND_ONE_RESULT = {
+  category: "exampleCategory",
   count: 42,
   createdAt: new Date(),
+  description: "exampleDescription",
   detectionId: "exampleDetectionId",
   id: "exampleId",
   updatedAt: new Date(),

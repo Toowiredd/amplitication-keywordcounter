@@ -36,8 +36,10 @@ export class OccurrenceControllerBase {
     return await this.service.createOccurrence({
       data: data,
       select: {
+        category: true,
         count: true,
         createdAt: true,
+        description: true,
         detectionId: true,
         id: true,
         updatedAt: true,
@@ -53,8 +55,10 @@ export class OccurrenceControllerBase {
     return this.service.occurrences({
       ...args,
       select: {
+        category: true,
         count: true,
         createdAt: true,
+        description: true,
         detectionId: true,
         id: true,
         updatedAt: true,
@@ -71,8 +75,10 @@ export class OccurrenceControllerBase {
     const result = await this.service.occurrence({
       where: params,
       select: {
+        category: true,
         count: true,
         createdAt: true,
+        description: true,
         detectionId: true,
         id: true,
         updatedAt: true,
@@ -101,8 +107,10 @@ export class OccurrenceControllerBase {
         where: params,
         data: data,
         select: {
+          category: true,
           count: true,
           createdAt: true,
+          description: true,
           detectionId: true,
           id: true,
           updatedAt: true,
@@ -128,8 +136,10 @@ export class OccurrenceControllerBase {
       return await this.service.deleteOccurrence({
         where: params,
         select: {
+          category: true,
           count: true,
           createdAt: true,
+          description: true,
           detectionId: true,
           id: true,
           updatedAt: true,

@@ -1,7 +1,7 @@
 import { Occurrence as TOccurrence } from "../api/occurrence/Occurrence";
 
-export const OCCURRENCE_TITLE_FIELD = "detectionId";
+export const OCCURRENCE_TITLE_FIELD = "category";
 
 export const OccurrenceTitle = (record: TOccurrence): string => {
-  return record.detectionId?.toString() || String(record.id);
+  return record.category?.toString() || String(record.id);
 };
