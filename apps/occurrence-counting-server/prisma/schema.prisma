@@ -18,9 +18,10 @@ model Keyword {
 model Occurrence {
   category    String?
   count       Int?
-  createdAt   DateTime @default(now())
+  createdAt   DateTime  @default(now())
   description String?
   detectionId String?
-  id          String   @id @default(cuid())
-  updatedAt   DateTime @updatedAt
+  id          String    @id @default(cuid())
+  timestamp   DateTime?
+  updatedAt   DateTime  @updatedAt
 }

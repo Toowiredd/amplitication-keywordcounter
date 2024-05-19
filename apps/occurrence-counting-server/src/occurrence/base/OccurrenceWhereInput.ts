@@ -16,6 +16,7 @@ import { Type } from "class-transformer";
 import { IsOptional } from "class-validator";
 import { IntNullableFilter } from "../../util/IntNullableFilter";
 import { StringFilter } from "../../util/StringFilter";
+import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
 
 @InputType()
 class OccurrenceWhereInput {
@@ -73,6 +74,17 @@ class OccurrenceWhereInput {
     nullable: true,
   })
   id?: StringFilter;
+
+  @ApiProperty({
+    required: false,
+    type: DateTimeNullableFilter,
+  })
+  @Type(() => DateTimeNullableFilter)
+  @IsOptional()
+  @Field(() => DateTimeNullableFilter, {
+    nullable: true,
+  })
+  timestamp?: DateTimeNullableFilter;
 }
 
 export { OccurrenceWhereInput as OccurrenceWhereInput };

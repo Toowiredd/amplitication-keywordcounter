@@ -5,6 +5,7 @@ import {
   EditProps,
   TextInput,
   NumberInput,
+  DateTimeInput,
 } from "react-admin";
 
 export const OccurrenceEdit = (props: EditProps): React.ReactElement => {
@@ -15,6 +16,7 @@ export const OccurrenceEdit = (props: EditProps): React.ReactElement => {
         <NumberInput step={1} label="count" source="count" />
         <TextInput label="description" multiline source="description" />
         <TextInput label="detection ID" source="detectionId" />
+        <DateTimeInput label="timestamp" source="timestamp" />
       </SimpleForm>
     </Edit>
   );

@@ -42,6 +42,7 @@ export class OccurrenceControllerBase {
         description: true,
         detectionId: true,
         id: true,
+        timestamp: true,
         updatedAt: true,
       },
     });
@@ -61,6 +62,7 @@ export class OccurrenceControllerBase {
         description: true,
         detectionId: true,
         id: true,
+        timestamp: true,
         updatedAt: true,
       },
     });
@@ -81,6 +83,7 @@ export class OccurrenceControllerBase {
         description: true,
         detectionId: true,
         id: true,
+        timestamp: true,
         updatedAt: true,
       },
     });
@@ -113,6 +116,7 @@ export class OccurrenceControllerBase {
           description: true,
           detectionId: true,
           id: true,
+          timestamp: true,
           updatedAt: true,
         },
       });
@@ -142,6 +146,7 @@ export class OccurrenceControllerBase {
           description: true,
           detectionId: true,
           id: true,
+          timestamp: true,
           updatedAt: true,
         },
       });

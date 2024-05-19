@@ -18,6 +18,7 @@ export const OccurrenceList = (props: ListProps): React.ReactElement => {
         <TextField label="description" source="description" />
         <TextField label="detection ID" source="detectionId" />
         <TextField label="ID" source="id" />
+        <TextField label="timestamp" source="timestamp" />
         <DateField source="updatedAt" label="Updated At" />
       </Datagrid>
     </List>

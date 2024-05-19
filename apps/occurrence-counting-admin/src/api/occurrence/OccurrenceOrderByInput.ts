@@ -7,5 +7,6 @@ export type OccurrenceOrderByInput = {
   description?: SortOrder;
   detectionId?: SortOrder;
   id?: SortOrder;
+  timestamp?: SortOrder;
   updatedAt?: SortOrder;
 };

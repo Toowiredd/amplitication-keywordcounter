@@ -5,5 +5,6 @@ export type Occurrence = {
   description: string | null;
   detectionId: string | null;
   id: string;
+  timestamp: Date | null;
   updatedAt: Date;
 };

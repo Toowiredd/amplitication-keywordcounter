@@ -94,6 +94,17 @@ class OccurrenceOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
+  timestamp?: SortOrder;
+
+  @ApiProperty({
+    required: false,
+    enum: ["asc", "desc"],
+  })
+  @IsOptional()
+  @IsEnum(SortOrder)
+  @Field(() => SortOrder, {
+    nullable: true,
+  })
   updatedAt?: SortOrder;
 }
 

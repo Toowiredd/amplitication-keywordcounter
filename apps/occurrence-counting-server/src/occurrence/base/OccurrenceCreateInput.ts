@@ -11,7 +11,8 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsString, IsOptional, IsInt } from "class-validator";
+import { IsString, IsOptional, IsInt, IsDate } from "class-validator";
+import { Type } from "class-transformer";
 
 @InputType()
 class OccurrenceCreateInput {
@@ -58,6 +59,17 @@ class OccurrenceCreateInput {
     nullable: true,
   })
   detectionId?: string | null;
+
+  @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  timestamp?: Date | null;
 }
 
 export { OccurrenceCreateInput as OccurrenceCreateInput };

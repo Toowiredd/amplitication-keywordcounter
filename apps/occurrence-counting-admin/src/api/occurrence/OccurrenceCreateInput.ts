@@ -3,4 +3,5 @@ export type OccurrenceCreateInput = {
   count?: number | null;
   description?: string | null;
   detectionId?: string | null;
+  timestamp?: Date | null;
 };

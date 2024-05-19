@@ -77,6 +77,17 @@ class Occurrence {
   id!: string;
 
   @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  timestamp!: Date | null;
+
+  @ApiProperty({
     required: true,
   })
   @IsDate()
