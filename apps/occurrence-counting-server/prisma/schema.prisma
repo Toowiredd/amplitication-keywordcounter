@@ -14,3 +14,14 @@ model Keyword {
   name      String?
   updatedAt DateTime @updatedAt
 }
+
+model Occurrence {
+  category    String?
+  count       Int?
+  createdAt   DateTime  @default(now())
+  description String?
+  detectionId String?
+  id          String    @id @default(cuid())
+  timestamp   DateTime?
+  updatedAt   DateTime  @updatedAt
+}
